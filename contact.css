@@ -1,3 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(alparo_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Markazi Text", serif;
+  color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 20px;
+  margin: 100px 20px 20px;
+}
+
+.navbar {
+  grid-column: 1 / 11;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+#logo {
+  font-family: "Jaro", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#logo:hover {
+  color: #b19cff;
+}
+
+#menu {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+#navLinks {
+  display: flex;
+  list-style: none;
+  background-color: black;
+  padding: 12px 20px;
+  border-radius: 50px;
+}
+
+#navLinks li {
+  margin: 0 20px;
+}
+
+#navLinks a {
+  font-family: "Imbue", serif;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+  transition: 0.3s ease;
+}
+
+#navLinks a:hover {
+  color: #b19cff;
+}
+
+/* Hamburger menu for small screens */
+#navLinks.show {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: rgba(0,0,0,0.95);
+  padding: 15px 20px;
+  border-radius: 15px;
+  gap: 15px;
+  width: 160px;
+  z-index: 999;
+}
+
+.text-section {
+  grid-column: 1 / 6;
+  display: grid;
+  place-content: center;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.text-section ul {
+  list-style: none;
+}
+
+.text-section li:nth-child(1) {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #c6e7ff;
+  line-height: 4rem;
+}
+
+.text-section li:nth-child(2) {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #9be1ff;
+  line-height: 4rem;
+}
+
+.text-section li:nth-child(3) {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.image-section {
+  grid-column: 6 / 11;
+  text-align: center;
+  padding: 20px;
+}
+
+.image-section img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid gold;
+  box-shadow: 0 0 25px gold;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
 /* Medium screens: 1029px to 801px */
 @media screen and (max-width: 1029px) and (min-width: 801px) {
   .grid-container {
